@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>res/cloud1.png</file>
+        <file>res/cloud2.png</file>
+        <file>res/cloud3.png</file>
+        <file>res/enemy1.png</file>
+        <file>res/enemy2.png</file>
+        <file>res/enemy3.png</file>
+        <file>res/player2.png</file>
+        <file>res/player1.png</file>
+        <file>res/enemy5.png</file>
+        <file>res/enemy4.png</file>
+        <file>res/bullet.png</file>
+    </qresource>
+</RCC>
