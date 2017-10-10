@@ -9,3 +9,4 @@ Scene是游戏场景类，
 管理场景中的所有GItem
 调用addItem向场景中添加一个GItem
 
+ParticleSystem是粒子系统
