@@ -31,7 +31,7 @@ public:
     virtual void keyReleaseEvent(QKeyEvent *event);
     virtual Scene* sceneStart();
     virtual int sceneFinish();
-    virtual void needDraw(QWidget *widget);
+    virtual void draw(QPainter *painter);
     void addItem(GItem *newItem);
 protected:
     void cleanItem();

@@ -14,7 +14,7 @@ MainWindow::MainWindow(QWidget *parent) :
     FPS = 60;
     mainScene = new SceneMain();
 //    sceneEnd = new SceneEnd();
-//    sceneStart = new SceneStart();
+    startScene = new SceneStart();
 
     scene = mainScene->sceneStart();
 
@@ -47,7 +47,8 @@ void MainWindow::keyReleaseEvent(QKeyEvent *event)
 
 void MainWindow::paintEvent(QPaintEvent * )
 {
-    scene->needDraw(this);
+    QPainter painter(this);
+    scene->draw(&painter);
 }
 
 void MainWindow::slotTimeout()

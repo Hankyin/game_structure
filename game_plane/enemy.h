@@ -10,7 +10,7 @@ class Enemy : public GItem
 public:
     Enemy(int id,Scene *scene);
     void fire();
-    int Id;
+    int id;
     void reSet();
     void refresh();
 private:

@@ -31,7 +31,11 @@ SOURCES += \
     scenemain.cpp \
     player.cpp \
     enemy.cpp \
-    bullet.cpp
+    bullet.cpp \
+    scenestart.cpp \
+    particlesystem.cpp \
+    particle.cpp \
+    utils.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -40,7 +44,11 @@ HEADERS += \
     scenemain.h \
     player.h \
     enemy.h \
-    bullet.h
+    bullet.h \
+    scenestart.h \
+    particlesystem.h \
+    particle.h \
+    utils.h
 
 RESOURCES += \
     res.qrc

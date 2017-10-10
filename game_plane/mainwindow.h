@@ -6,6 +6,7 @@
 #include "QKeyEvent"
 #include "QPixmap"
 #include "scenemain.h"
+#include "scenestart.h"
 
 class MainWindow : public QMainWindow
 {
@@ -23,9 +24,9 @@ private slots:
     void slotSetFPS();
 private:
     Scene *scene;
-//    SceneEnd *sceneEnd;
+//    SceneEnd *endScene;
     SceneMain *mainScene;
-//    SceneStart *sceneStart;
+    SceneStart *startScene;
     QTimer *timer;
     int FPS;
     void sceneManager();

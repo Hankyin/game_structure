@@ -4,7 +4,9 @@ SceneMain::SceneMain()
     :Scene()
 {
     player = new Player(0,110,10,this);
+    parSys = new ParticleSystem(150,300,100,this);
     addItem(player);
+    addItem(parSys);
     enemyNum = 4;
     for(int i = 0;i < enemyNum;i++)
     {

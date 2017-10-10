@@ -1,9 +1,10 @@
 #include "enemy.h"
-
+#include "QDebug"
+#include "QTime"
 Enemy::Enemy(int id, Scene *scene)
     :GItem(scene)
 {
-    this->Id = id;
+    this->id = id;
     this->posX = getRand(10,350);
     this->posY = -getRand(10,100);
     this->speedX = 0;
@@ -46,6 +47,7 @@ int Enemy::getRand(int start, int end)
 {
     //得到[start,end]之间的随机整数
     //end必须大于start
-    qsrand(Id);
+    //每次要更换种子值，否则得到的随机数是一样的。
+    qsrand(QTime(0,0,0).secsTo(QTime::currentTime()) * id);
     return qrand()%(end - start) + start;
 }

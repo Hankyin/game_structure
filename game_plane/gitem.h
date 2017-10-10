@@ -3,24 +3,29 @@
 
 #include "QPixmap"
 #include "QRect"
+#include "QPainter"
 #include "scene.h"
 
 class Scene;
+
 class GItem
 {
 public:
-    GItem(Scene *scene);
+    GItem(Scene *scene,int posX = 0,int posY = 0);
     GItem(int _posX,int _posY,int _h,int _w);
     void setPos(int posX,int posY);
+    void setSpeed(int vX,int vY);
     virtual void moveLeft();
     virtual void moveRight();
     virtual void moveUp();
     virtual void moveDown();
+    virtual void refresh();
+    virtual void draw(QPainter *painter);
     bool isAlive() const;
     void setAlive(bool value);
     QRect& rect();
     QPixmap& pix();
-    virtual void refresh();
+
 protected:
     Scene *scene;
     int posX;

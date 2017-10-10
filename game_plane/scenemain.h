@@ -4,6 +4,7 @@
 #include "scene.h"
 #include "player.h"
 #include "enemy.h"
+#include "particlesystem.h"
 
 class SceneMain:public Scene
 {
@@ -12,6 +13,7 @@ public:
 
 private:
     Player *player;
+    ParticleSystem *parSys;
     QList<Enemy*> enemyList;
     int enemyNum;
 

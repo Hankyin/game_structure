@@ -1,10 +1,10 @@
 #include "gitem.h"
 
 //游戏中所有物体的父类
-GItem::GItem(Scene *scene)
+GItem::GItem(Scene *scene, int posX, int posY)
 {
-    posX = 0;
-    posY = 0;
+    this->posX = posX;
+    this->posY = posY;
     h = 0;
     w = 0;
     speedX = 0;
@@ -26,6 +26,12 @@ void GItem::setPos(int posX, int posY)
 {
     this->posX = posX;
     this->posY = posY;
+}
+
+void GItem::setSpeed(int vX, int vY)
+{
+    speedX = vX;
+    speedY = vY;
 }
 
 void GItem::moveLeft()
@@ -71,5 +77,18 @@ QPixmap &GItem::pix()
 
 void GItem::refresh()
 {
+
+}
+
+void GItem::draw(QPainter *painter)
+{
+    if(isAlive())
+    {
+        if(!curPix->isNull())
+        {
+            painter->drawPixmap(rect(),pix());
+        }
+
+    }
 
 }

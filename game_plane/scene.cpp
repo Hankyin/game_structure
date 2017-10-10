@@ -75,17 +75,11 @@ int Scene::sceneFinish()
     return finishStatus;
 }
 
-void Scene::needDraw(QWidget *widget)
+void Scene::draw(QPainter *painter)
 {
-    QPainter painter(widget);
     for(int i = 0; i < items->size();i++)
     {
-        GItem *a = items->at(i);
-        if(a->isAlive())
-        {
-            QRect rect = a->rect();
-            painter.drawPixmap(rect,a->pix());
-        }
+        items->at(i)->draw(painter);
     }
 }
 
