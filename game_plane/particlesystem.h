@@ -12,7 +12,6 @@ public:
     void draw(QPainter *painter);
     void refresh();
 private:
-    void initParticles();
     int numParticles;
     QList<Particle*> particleList;
 };

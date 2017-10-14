@@ -1,6 +1,7 @@
 #include "particlesystem.h"
 #include "utils.h"
 #include "QDebug"
+
 ParticleSystem::ParticleSystem(int posX, int posY,int numParticles, Scene *scene)
     :GItem(scene,posX,posY)
 {
@@ -17,18 +18,7 @@ void ParticleSystem::draw(QPainter *painter)
 
 void ParticleSystem::refresh()
 { 
-    initParticles();
-    for(int i = 0;i < particleList.size();i++)
-    {
-        particleList.at(i)->refresh();
-    }
-}
-
-void ParticleSystem::initParticles()
-{
-//    qDeleteAll(particleList);
-//    particleList.clear();
-    for(int i = 0; i < this->numParticles;i++)
+    if(particleList.size() < numParticles)
     {
         Particle *p = new Particle(scene,posX,posY);
         //p->setAccFacter();
@@ -39,4 +29,10 @@ void ParticleSystem::initParticles()
         p->setSpeed(vx,vy);
         particleList.append(p);
     }
+    for(int i = 0;i < particleList.size();i++)
+    {
+        particleList.at(i)->refresh();
+    }
 }
+
+

@@ -1,14 +1,15 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2017-10-08T16:14:36
+# Project created by QtCreator 2017-10-12T17:05:35
 #
 #-------------------------------------------------
 
 QT       += core gui
+QT += multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = game_plane
+TARGET = game_flappybird
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -26,31 +27,25 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    scene.cpp \
     gitem.cpp \
+    scene.cpp \
+    animation.cpp \
     scenemain.cpp \
-    player.cpp \
-    enemy.cpp \
-    bullet.cpp \
-    scenestart.cpp \
-    particlesystem.cpp \
-    particle.cpp \
     utils.cpp \
-    animation.cpp
+    ground.cpp \
+    bird.cpp \
+    pipes.cpp
 
 HEADERS += \
         mainwindow.h \
-    scene.h \
     gitem.h \
+    scene.h \
+    animation.h \
     scenemain.h \
-    player.h \
-    enemy.h \
-    bullet.h \
-    scenestart.h \
-    particlesystem.h \
-    particle.h \
     utils.h \
-    animation.h
+    ground.h \
+    bird.h \
+    pipes.h
 
 RESOURCES += \
-    res.qrc
+    resoruce.qrc

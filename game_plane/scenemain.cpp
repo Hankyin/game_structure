@@ -5,8 +5,10 @@ SceneMain::SceneMain()
 {
     player = new Player(0,110,10,this);
     parSys = new ParticleSystem(150,300,100,this);
+    anim = new Animation(200,200,this);
     addItem(player);
     addItem(parSys);
+    addItem(anim);
     enemyNum = 4;
     for(int i = 0;i < enemyNum;i++)
     {
@@ -18,8 +20,7 @@ SceneMain::SceneMain()
     registerKey("s",(CallBack)&SceneMain::playerDown);
     registerKey("a",(CallBack)&SceneMain::playerLeft);
     registerKey("d",(CallBack)&SceneMain::playerRight);
-    registerKey("k",(CallBack(&SceneMain::playerFire)));
-
+    registerKey("k",(CallBack)&SceneMain::playerFire);
 }
 
 void SceneMain::playerUp()

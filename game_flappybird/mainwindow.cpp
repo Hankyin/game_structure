@@ -8,13 +8,13 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     //参数初始化
 
-    setWindowIcon(QPixmap(":/res/res/player1.png"));
-    setFixedSize(400,600);
+    setWindowIcon(QPixmap(":/picture/res/picture/bird_yellow.png").copy(0,0,34,24));
+    setFixedSize(288,512);
 
     FPS = 30;
     mainScene = new SceneMain();
 //    sceneEnd = new SceneEnd();
-    startScene = new SceneStart();
+//    startScene = new SceneStart();
 
     scene = mainScene->sceneStart();
 

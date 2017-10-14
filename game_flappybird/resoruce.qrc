@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/picture">
+        <file>res/picture/bg_day.png</file>
+        <file>res/picture/bird_yellow.png</file>
+        <file>res/picture/ground.png</file>
+        <file>res/picture/pipe.png</file>
+        <file>res/picture/pipe_op.png</file>
+        <file>res/picture/gameover.png</file>
+    </qresource>
+    <qresource prefix="/sound">
+        <file>res/music/die.wav</file>
+        <file>res/music/hit.wav</file>
+        <file>res/music/jump.wav</file>
+        <file>res/music/pass.wav</file>
+        <file>res/music/pressbt.wav</file>
+    </qresource>
+</RCC>

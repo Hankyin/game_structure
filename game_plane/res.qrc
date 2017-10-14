@@ -11,5 +11,10 @@
         <file>res/enemy5.png</file>
         <file>res/enemy4.png</file>
         <file>res/bullet.png</file>
+        <file>res/solider_0_.png</file>
+        <file>res/solider_1_.png</file>
+        <file>res/solider_2_.png</file>
+        <file>res/solider_3_.png</file>
     </qresource>
+    <qresource prefix="/animation"/>
 </RCC>

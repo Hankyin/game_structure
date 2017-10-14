@@ -5,6 +5,7 @@
 #include "player.h"
 #include "enemy.h"
 #include "particlesystem.h"
+#include "animation.h"
 
 class SceneMain:public Scene
 {
@@ -14,6 +15,7 @@ public:
 private:
     Player *player;
     ParticleSystem *parSys;
+    Animation *anim;
     QList<Enemy*> enemyList;
     int enemyNum;
 
